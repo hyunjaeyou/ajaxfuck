@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="theDiv">
+        <button>Change</button>
+        
+
+    <script>
+    function testAjax() {
+         return $.ajax({
+                url: "https://dog.ceo/api/breeds/image/random"
+     });
+    }
+
+    var promise = testAjax();
+    var dog = promise["message"]
+    var img = new
+    $("button").click(function(){
+        $('#theDiv').prepend('<img src="https://images.dog.ceo/breeds/maltese/n02085936_7364.jpg" />')
+    });
+    
+    //     $.ajax({
+    //     url: "https://dog.ceo/api/breeds/image/random", 
+    //     type: "post",
+    //     dataType: "json",
+    //     success: function(){
+    //     alert('good');
+    // }});
+
+    </script>
+    </div>
+</body>
+</html>
